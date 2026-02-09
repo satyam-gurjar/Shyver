@@ -1,0 +1,211 @@
+.
+|-- .gitignore
+|-- README.md
+|-- Server
+|   |-- app
+|   |   |-- controllers
+|   |   |   `-- chat_controller.py
+|   |   |-- main.py
+|   |   |-- model
+|   |   |   |-- chat_memory.py
+|   |   |   |-- llm_model.py
+|   |   |   `-- schemas.py
+|   |   `-- services
+|   |       `-- chat_service.py
+|   |-- requirment.txt
+|   `-- test_chat.py
+|-- Web
+|   |-- .gitignore
+|   |-- README.md
+|   |-- eslint.config.js
+|   |-- index.html
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- src
+|   |   |-- App.jsx
+|   |   |-- api
+|   |   |   `-- chat.js
+|   |   |-- components
+|   |   |   |-- ChatBox.jsx
+|   |   |   `-- Message.jsx
+|   |   |-- index.css
+|   |   |-- main.jsx
+|   |   `-- pages
+|   |       `-- Chat.jsx
+|   `-- vite.config.js
+|-- android
+|   |-- .expo
+|   |   |-- README.md
+|   |   |-- devices.json
+|   |   |-- types
+|   |   |   `-- router.d.ts
+|   |   `-- web
+|   |       `-- cache
+|   |           `-- production
+|   |               `-- images
+|   |                   |-- android-adaptive-foreground
+|   |                   |   `-- android-adaptive-foreground-9e3d0315a33c6799de601dd34cd8bf8cc3a8d16f3bf75592baec2ceb7240b391-cover-transparent
+|   |                   |       |-- icon_108.png
+|   |                   |       |-- icon_162.png
+|   |                   |       |-- icon_216.png
+|   |                   |       |-- icon_324.png
+|   |                   |       `-- icon_432.png
+|   |                   |-- android-standard-circle
+|   |                   |   `-- android-standard-circle-9e3d0315a33c6799de601dd34cd8bf8cc3a8d16f3bf75592baec2ceb7240b391-cover-#E6F4FE
+|   |                   |       |-- icon_144.png
+|   |                   |       |-- icon_192.png
+|   |                   |       |-- icon_48.png
+|   |                   |       |-- icon_72.png
+|   |                   |       `-- icon_96.png
+|   |                   |-- android-standard-square
+|   |                   |   `-- android-standard-square-9e3d0315a33c6799de601dd34cd8bf8cc3a8d16f3bf75592baec2ceb7240b391-cover-#E6F4FE
+|   |                   |       |-- icon_144.png
+|   |                   |       |-- icon_192.png
+|   |                   |       |-- icon_48.png
+|   |                   |       |-- icon_72.png
+|   |                   |       `-- icon_96.png
+|   |                   `-- splash-android
+|   |                       `-- splash-android-5f4c0a732b6325bf4071d9124d2ae67e037cb24fcc9c482ef82bea742109a3b8-contain
+|   |                           |-- icon_200.png
+|   |                           |-- icon_300.png
+|   |                           |-- icon_400.png
+|   |                           |-- icon_600.png
+|   |                           `-- icon_800.png
+|   |-- .gitignore
+|   |-- .vscode
+|   |   |-- extensions.json
+|   |   `-- settings.json
+|   |-- README.md
+|   |-- android
+|   |   |-- .gitignore
+|   |   |-- app
+|   |   |   |-- build.gradle
+|   |   |   |-- debug.keystore
+|   |   |   |-- proguard-rules.pro
+|   |   |   `-- src
+|   |   |       |-- debug
+|   |   |       |   `-- AndroidManifest.xml
+|   |   |       |-- debugOptimized
+|   |   |       |   `-- AndroidManifest.xml
+|   |   |       `-- main
+|   |   |           |-- AndroidManifest.xml
+|   |   |           |-- java
+|   |   |           |   `-- com
+|   |   |           |       `-- satya
+|   |   |           |           `-- voicechatbot
+|   |   |           |               |-- MainActivity.kt
+|   |   |           |               `-- MainApplication.kt
+|   |   |           `-- res
+|   |   |               |-- drawable
+|   |   |               |   |-- ic_launcher_background.xml
+|   |   |               |   `-- rn_edit_text_material.xml
+|   |   |               |-- drawable-hdpi
+|   |   |               |   `-- splashscreen_logo.png
+|   |   |               |-- drawable-mdpi
+|   |   |               |   `-- splashscreen_logo.png
+|   |   |               |-- drawable-xhdpi
+|   |   |               |   `-- splashscreen_logo.png
+|   |   |               |-- drawable-xxhdpi
+|   |   |               |   `-- splashscreen_logo.png
+|   |   |               |-- drawable-xxxhdpi
+|   |   |               |   `-- splashscreen_logo.png
+|   |   |               |-- mipmap-anydpi-v26
+|   |   |               |   |-- ic_launcher.xml
+|   |   |               |   `-- ic_launcher_round.xml
+|   |   |               |-- mipmap-hdpi
+|   |   |               |   |-- ic_launcher.webp
+|   |   |               |   |-- ic_launcher_foreground.webp
+|   |   |               |   `-- ic_launcher_round.webp
+|   |   |               |-- mipmap-mdpi
+|   |   |               |   |-- ic_launcher.webp
+|   |   |               |   |-- ic_launcher_foreground.webp
+|   |   |               |   `-- ic_launcher_round.webp
+|   |   |               |-- mipmap-xhdpi
+|   |   |               |   |-- ic_launcher.webp
+|   |   |               |   |-- ic_launcher_foreground.webp
+|   |   |               |   `-- ic_launcher_round.webp
+|   |   |               |-- mipmap-xxhdpi
+|   |   |               |   |-- ic_launcher.webp
+|   |   |               |   |-- ic_launcher_foreground.webp
+|   |   |               |   `-- ic_launcher_round.webp
+|   |   |               |-- mipmap-xxxhdpi
+|   |   |               |   |-- ic_launcher.webp
+|   |   |               |   |-- ic_launcher_foreground.webp
+|   |   |               |   `-- ic_launcher_round.webp
+|   |   |               |-- values
+|   |   |               |   |-- colors.xml
+|   |   |               |   |-- strings.xml
+|   |   |               |   `-- styles.xml
+|   |   |               `-- values-night
+|   |   |                   `-- colors.xml
+|   |   |-- build.gradle
+|   |   |-- gradle
+|   |   |   `-- wrapper
+|   |   |       |-- gradle-wrapper.jar
+|   |   |       `-- gradle-wrapper.properties
+|   |   |-- gradle.properties
+|   |   |-- gradlew
+|   |   |-- gradlew.bat
+|   |   `-- settings.gradle
+|   |-- app
+|   |   |-- (tabs)
+|   |   |   |-- _layout.tsx
+|   |   |   |-- explore.tsx
+|   |   |   `-- index.tsx
+|   |   |-- _layout.tsx
+|   |   `-- modal.tsx
+|   |-- app.json
+|   |-- assets
+|   |   `-- images
+|   |       |-- android-icon-background.png
+|   |       |-- android-icon-foreground.png
+|   |       |-- android-icon-monochrome.png
+|   |       |-- favicon.png
+|   |       |-- icon.png
+|   |       |-- partial-react-logo.png
+|   |       |-- react-logo.png
+|   |       |-- react-logo@2x.png
+|   |       |-- react-logo@3x.png
+|   |       `-- splash-icon.png
+|   |-- components
+|   |   |-- external-link.tsx
+|   |   |-- haptic-tab.tsx
+|   |   |-- hello-wave.tsx
+|   |   |-- parallax-scroll-view.tsx
+|   |   |-- themed-text.tsx
+|   |   |-- themed-view.tsx
+|   |   `-- ui
+|   |       |-- collapsible.tsx
+|   |       |-- icon-symbol.ios.tsx
+|   |       `-- icon-symbol.tsx
+|   |-- constants
+|   |   `-- theme.ts
+|   |-- eslint.config.js
+|   |-- expo-env.d.ts
+|   |-- hooks
+|   |   |-- use-color-scheme.ts
+|   |   |-- use-color-scheme.web.ts
+|   |   `-- use-theme-color.ts
+|   |-- metro.config.js
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- scripts
+|   |   `-- reset-project.js
+|   `-- tsconfig.json
+|-- app
+|   |-- ChatAssistant.spec
+|   |-- README.md
+|   |-- build.py
+|   |-- controllers
+|   |   `-- chat_gui_controller.py
+|   |-- main.py
+|   |-- models
+|   |   |-- chat_history.py
+|   |   |-- llm_model.py
+|   |   `-- voice_service.py
+|   |-- requirements.txt
+|   `-- views
+|       `-- chat_gui_view.py
+`-- project-tree.txt
+
+67 directories, 142 files
