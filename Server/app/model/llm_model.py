@@ -20,9 +20,9 @@ except Exception as e:
 # Mock responses (fallback)
 # -------------------------------
 MOCK_RESPONSES = [
-    "Running in mock mode. Start Ollama to get real responses.",
-    "Phi model is not reachable right now.",
-    "Fallback mode active.",
+    "Ollama server is not running on localhost:11434. This is a default fallback reply.",
+    "I'm currently in offline mode because the local Ollama server is not reachable.",
+    "Fallback response: please start Ollama (port 11434) to get real AI answers.",
 ]
 
 
@@ -34,8 +34,11 @@ def generate_response(prompt: str) -> str:
         if OLLAMA_AVAILABLE:
             return llm.invoke(prompt)
 
+        # Ollama was not available at import time
         return random.choice(MOCK_RESPONSES)
 
     except Exception as e:
-        print(f"Error: {e}")
+        # Most likely Ollama is not running or became unreachable.
+        # Log once per call and return a friendly default message
+        print(f"Ollama connection error, using fallback: {e}")
         return random.choice(MOCK_RESPONSES)
